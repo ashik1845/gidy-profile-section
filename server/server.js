@@ -10,13 +10,11 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: [
-    "http://localhost:5173",           // local dev
-    "https://gidy-profile-replica.netlify.app/"  // production
-  ],
+  origin: "https://gidy-profile-replica.netlify.app",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
+
 app.use(express.json());
 app.use("/uploads", express.static("uploads"));
 

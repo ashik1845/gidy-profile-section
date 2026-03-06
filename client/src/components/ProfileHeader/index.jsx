@@ -10,6 +10,7 @@ import AddSocialModal from "./modals/AddSocialModal";
 import EditSocialsModal from "./modals/EditSocialsModal";
 import "../../styles/ProfileHeader.css";
 import "../../styles/PublicView.css";
+import { BASE_URL } from "../../config";
 
 const ProfileHeader = forwardRef(function ProfileHeader({ profile, refresh }, ref) {
   const { isPublic, togglePublic } = usePublicView();
@@ -45,7 +46,7 @@ const ProfileHeader = forwardRef(function ProfileHeader({ profile, refresh }, re
   };
 
   const handleDownloadResume = async () => {
-    const response = await fetch(`https://gidy-profile-section.onrender.com/${profile.resume}`);
+    const response = await fetch(`${BASE_URL}/${profile.resume}`);
     const blob = await response.blob();
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement("a");

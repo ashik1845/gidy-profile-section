@@ -1,7 +1,8 @@
 import axios from "axios";
+import { BASE_URL } from "./config";
 
 const API = axios.create({
-  baseURL: "https://gidy-profile-section.onrender.com/api/profile"
+  baseURL: `${BASE_URL}/api/profile`
 });
 
 export default API;
