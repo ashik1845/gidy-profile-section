@@ -34,15 +34,24 @@ function App() {
     if (key === "bio")            profileRef.current?.openModal();
   };
 
-  const fetchProfile = async () => {
+const fetchProfile = async () => {
+  try {
     const res = await API.get("/");
     setProfile(res.data.profile);
     setCompletion(res.data.completion);
-  };
+  } catch (err) {
+    setTimeout(fetchProfile, 5000);
+  }
+};
 
   useEffect(() => { fetchProfile(); }, []);
 
-  if (!profile) return <h2>Loading...</h2>;
+ if (!profile) return (
+  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100vh", gap: "12px" }}>
+    <div style={{ fontSize: "14px", color: "#6b7280" }}>Loading profile...</div>
+    <div style={{ fontSize: "12px", color: "#9ca3af" }}>This may take up to 30 seconds on first load</div>
+  </div>
+);
 
   return (
     <div className="page">

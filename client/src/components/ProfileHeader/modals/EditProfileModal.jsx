@@ -8,7 +8,6 @@ function EditProfileModal({ profile, open, onClose, onSave }) {
   const [avatarFile, setAvatarFile] = useState(null);
   const [avatarPreview, setAvatarPreview] = useState(null);
 
-  // ✅ Add this useEffect to re-sync form whenever profile prop changes
 useEffect(() => {
   setForm(profile);
 }, [profile]);
