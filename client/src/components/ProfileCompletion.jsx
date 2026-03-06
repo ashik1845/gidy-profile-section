@@ -1,4 +1,4 @@
-import "../styles/ProfileCompletion.css";
+import "../styles/Profilecompletion.css";
 
 const TASKS = [
   {
