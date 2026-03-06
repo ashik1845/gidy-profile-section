@@ -1,1 +1,1 @@
-export const BASE_URL = "https://gidy-profile-section.onrender.com/";
+export const BASE_URL = "https://gidy-profile-section.onrender.com";
