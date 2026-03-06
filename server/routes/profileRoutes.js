@@ -9,12 +9,16 @@ const { CloudinaryStorage } = require("multer-storage-cloudinary");
 
 const storage = new CloudinaryStorage({
   cloudinary,
-  params: (req, file) => ({
-    folder: "gidy-profile",
-    allowed_formats: ["jpg", "jpeg", "png", "pdf", "doc", "docx"],
-    resource_type: file.mimetype === "application/pdf" ? "raw" : "image",
-    public_id: Date.now() + "-" + file.originalname,
-  }),
+  params: (req, file) => {
+    const isPDF = file.mimetype === "application/pdf";
+    return {
+      folder: "gidy-profile",
+      allowed_formats: ["jpg", "jpeg", "png", "pdf", "doc", "docx"],
+      resource_type: isPDF ? "raw" : "image",
+      type: "upload", // ← ADD THIS — forces public access
+      public_id: Date.now() + "-" + file.originalname.replace(/\s+/g, "_"),
+    };
+  },
 });
 
 const upload = multer({ storage });
