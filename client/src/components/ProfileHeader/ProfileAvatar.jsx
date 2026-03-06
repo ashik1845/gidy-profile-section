@@ -1,10 +1,10 @@
-import { BASE_URL } from "../../config";
+
 
 function ProfileAvatar({ profile }) {
   return (
     <>
       <img
-        src={profile.avatar ?  `${BASE_URL}/${profile.avatar}` : "/avatar.png"}
+        src={profile.avatar ? profile.avatar : "/avatar.png"}
         alt="avatar"
         className="avatar"
       />

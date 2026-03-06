@@ -54,9 +54,3 @@ coverage/
 # =========================
 *.tmp
 *.temp
-
-# =========================
-# Uploaded files 
-# =========================
-uploads/*
-!uploads/.gitkeep

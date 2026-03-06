@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Modal from "../../Modal";
-import { BASE_URL } from "../../../config";
 
 function EditProfileModal({ profile, open, onClose, onSave }) {
   const [form, setForm] = useState(profile);
@@ -23,13 +22,7 @@ useEffect(() => {
         {/* Avatar */}
         <div className="avatar-edit-container">
           <img
-            src={
-              avatarPreview
-                ? avatarPreview
-                : profile.avatar
-                ? `${BASE_URL}/${profile.avatar}`
-                : "/avatar.png"
-            }
+            src={avatarPreview ? avatarPreview : profile.avatar ? profile.avatar : "/avatar.png"}
             className="avatar-preview"
           />
 

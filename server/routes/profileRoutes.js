@@ -4,10 +4,19 @@ const multer = require("multer");
 const controller = require("../controllers/profileController");
 
 // ── Multer setup ──────────────────────────────────────────
-const storage = multer.diskStorage({
-  destination: "uploads/",
-  filename: (req, file, cb) => cb(null, Date.now() + "-" + file.originalname),
+const cloudinary = require("../config/cloudinary");
+const { CloudinaryStorage } = require("multer-storage-cloudinary");
+
+const storage = new CloudinaryStorage({
+  cloudinary,
+  params: (req, file) => ({
+    folder: "gidy-profile",
+    allowed_formats: ["jpg", "jpeg", "png", "pdf", "doc", "docx"],
+    resource_type: file.mimetype === "application/pdf" ? "raw" : "image",
+    public_id: Date.now() + "-" + file.originalname,
+  }),
 });
+
 const upload = multer({ storage });
 
 // ── Profile ───────────────────────────────────────────────
