@@ -1,0 +1,210 @@
+/* ========== PROFILE COMPLETION CARD ========== */
+
+.profile-complete {
+  padding: 15px;
+}
+
+.profile-complete-header h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #343434;
+  margin: 0 0 6px 0;
+}
+
+.profile-complete-header p {
+  font-size: 12px;
+  color: #64748b;
+  margin: 0 0 14px 0;
+    font-weight: 450;
+  color: #343434;
+}
+
+/* Progress bar */
+.progress-label {
+  font-size: 12px;
+  color: #343434;
+  margin-bottom: 6px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 450;
+}
+
+.progress-container {
+  width: 100%;
+  background: #80808080;
+  border-radius: 999px;
+  height: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #02b74b;
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+
+/* Task items */
+.completion-tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.completion-task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f6f7f9;
+  border: #80808080;
+  border-radius: 10px;
+  padding: 12px 12px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.completion-task:hover {
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+}
+
+.completion-task.done {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.task-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #343434;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.task-points {
+  font-size: 12px;
+  font-weight: 550;
+  color: #02b74b;
+}
+
+.task-desc {
+  font-size: 12px;
+  color: #343434;
+  font-weight: 400;
+  line-height: 1.4;
+  
+}
+
+.task-action {
+  flex-shrink: 0;
+  margin-left: 10px;
+  color: #93c5fd;
+}
+
+.task-action svg {
+     width: 26px;
+  height: 26px;
+  color: #4285ffcc;
+
+}
+
+/* Completed state */
+.profile-complete-done {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  /* ✅ text left, icon right */
+  padding: 6px 4px;
+  gap: 14px;
+}
+
+.done-text h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #343434;
+  margin: 0 0 4px 0;
+}
+
+.done-text p {
+  font-size: 12px;
+  color: #343434;
+  font-weight: 450;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.completion-tick-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  color: #22c55e;  /* ✅ green tick */
+}
+
+@media (max-width: 700px) {
+  .profile-complete {
+    padding: 10px;
+  }
+
+  .profile-complete-header h4 {
+    font-size: 12px;
+  }
+
+  .profile-complete-header p {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  .progress-label {
+    font-size: 11px;
+  }
+
+  .progress-container {
+    height: 8px;
+    margin-bottom: 8px;
+  }
+
+  .completion-tasks {
+    gap: 4px;
+  }
+
+  .completion-task {
+    padding: 9px 10px;
+    border-radius: 8px;
+  }
+
+  .task-title {
+    font-size: 11px;
+  }
+
+  .task-points {
+    font-size: 11px;
+  }
+
+  .task-desc {
+    font-size: 11px;
+  }
+
+  .task-action svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .done-text h4 {
+    font-size: 12px;
+  }
+
+  .done-text p {
+    font-size: 11px;
+  }
+
+  .completion-tick-icon {
+    width: 22px;
+    height: 22px;
+  }
+}

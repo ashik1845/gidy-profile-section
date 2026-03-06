@@ -1,0 +1,118 @@
+/* ========== SKILLS SECTION ========== */
+
+/* Display chips (card view) */
+.skills-chip-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 4px;
+}
+
+.skills-chip {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #4285f44d;
+  border-radius: 15px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #343434;
+  background: #4285f40d;
+}
+
+/* Tag input inside modal */
+.skills-tag-input{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+  border-bottom:1.5px solid #cfcfcf;
+  padding-bottom:12px;
+  min-height:50px;
+}
+
+.skills-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background:#e5e5e5;
+  border-radius:999px;
+  padding:6px 10px 6px 14px;
+  font-size:14px;
+  color:#333;
+}
+.skills-tag-remove{
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  border:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  padding:0;
+  margin-left:auto;   /* ⭐ pushes icon to the end */
+  background:none;
+}
+
+
+
+.skills-tag-field{
+  border:none;
+  outline:none;
+  font-size:14px;
+  color:#555;
+  min-width:100px;
+  flex:1;
+  background:transparent;
+}
+
+.skills-tag-field::placeholder{
+  color:#9ca3af;
+  font-size:14px;
+}
+
+.skills-remove-icon{
+  width:22px;
+  height:22px;
+  fill:rgba(0, 0, 0, 0.26);
+}
+
+
+/* ── Override modal-body defaults for Skills modal only ── */
+.skills-modal .modal-body {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .skills-chip {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  .skills-tag {
+    font-size: 12px;
+    padding: 4px 8px 4px 10px;
+  }
+
+  .skills-tag-remove {
+    width: 15px;
+    height: 15px;
+  }
+
+  .skills-remove-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .skills-tag-field {
+    font-size: 12px;
+    min-width: 80px;
+  }
+
+  .skills-tag-field::placeholder {
+    font-size: 12px;
+  }
+}

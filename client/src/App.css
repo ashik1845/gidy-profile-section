@@ -1,0 +1,183 @@
+/* ========== GLOBAL STYLES ========== */
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background-color: #f3f4f6;
+}
+
+/* Main container */
+.content {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/* Career card */ 
+.career-card { 
+      background-color: #fff;
+      padding: 5px 24px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+   align-items: center; 
+  }
+
+/* Text section */
+
+.career-text h3{
+  font-size:16px;
+  font-weight:500;
+  color:#000000;
+  margin-bottom:6px;
+}
+
+.career-text p{
+  font-size:14px;
+  color: rgb(107, 114, 128);
+  max-width:420px;
+  line-height:1.5;
+}
+
+/* App.css — add this */
+.career-empty {
+  font-size: 14px;
+  
+    padding: 16px 0px;
+  color: #9ca3af;
+  margin: 0;
+  border-radius: 15px;
+}
+
+/* Button */
+
+.primary-btn{
+  background:#111827;
+  color:white;
+  border:none;
+     padding: 10px 16px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:500;
+  font-size:14px;
+
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  transition:all 0.2s ease;
+}
+
+.primary-btn:hover{
+  background:#1f2937;
+}
+
+/* Grid layout */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+    gap:0;
+  }
+}
+
+@media (max-width: 750px) {
+  .career-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 16px 24px;
+    gap: 12px;
+  }
+
+  .career-text p {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .career-card {
+    padding: 10px 16px;
+    gap: 8px;
+  }
+
+  .career-text h3 {
+    font-size: 13px;
+    margin-bottom: 3px;
+  }
+
+  .career-text p {
+    font-size: 12px;
+  }
+
+  .primary-btn {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+
+
+/* Ultra thin scrollbar */
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+/* Remove ALL arrow buttons */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-button:single-button {
+  display: none;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+  display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Thumb */
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.25);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0,0.4);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.25) transparent;
+}
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}

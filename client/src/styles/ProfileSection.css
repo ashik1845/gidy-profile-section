@@ -1,0 +1,258 @@
+/* ========== PROFILE SECTION (shared: Experience + Education) ========== */
+
+.card {
+  background: #ffffff;
+  border-radius: 15px;
+ padding: 10px 15px 15px 15px;
+  margin-top: 5px;
+  box-shadow: 0 8px 24px #959da533;
+}
+
+.section-header h3 {
+  margin: 0;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #343434;
+  margin-bottom: 12px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  border-radius: 12px;
+  background: #f9fafb;
+}
+
+.empty-state {
+  text-align: center;
+  color: #343434;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.add-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.add-icon {
+  width: 26px;
+  height: 26px;
+  color: #6b7280;
+}
+
+.add-icon:hover {
+  color: #111827;
+}
+
+/* ── Item row ── */
+
+.profile-common-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 12px;
+  position: relative;
+}
+
+.profile-common-left {
+  display: flex;
+  gap: 14px;
+  align-items:flex-start;
+}
+
+.profile-common-details {
+  margin-top:3px ;
+}
+
+
+/* ── Icon box — two variants ── */
+
+.profile-common-icon {
+  width: 60px;
+  height: 67px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+   flex-shrink: 0; 
+  /* Experience: blue tint */
+  border: 1px solid #4285f44d;
+  background: #4285f40d;
+}
+
+.profile-common-icon--edu {
+  /* Education: grey tint */
+  border: 1px solid #8080804d;
+  background: #8080800d;
+}
+
+/* ── Icon colours ── */
+
+.profile-common-svg {
+  width: 25px;
+  height: 25px;
+  color: #4285ffcc;         /* Experience — blue */
+}
+
+.profile-common-svg--edu {
+  width: 25px;
+  height: 25px;
+  color: grey;              /* Education — grey */
+}
+
+.profile-common-svg--certificate {
+  width: 25px;
+  height: 25px;
+  color: #4285ffcc;         /* Experience — blue */
+}
+
+/* ── Item text ── */
+
+.profile-common-role {
+  font-weight: 600;
+  margin: 0 0 3px 0;
+  color: #343434;
+  font-size: 14px !important;
+}
+
+.profile-common-company {
+  font-size: 14px;
+  margin: 0 0 3px 0;
+  color: #343434;
+  font-weight: 500;
+}
+
+.profile-common-dates {
+  font-size: 12px;
+  color: #343434;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5
+}
+
+/* ── 3-dot menu ── */
+
+.profile-common-menu {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.profile-common-dropdown {
+  position: absolute;
+  right: 20px;
+  margin-top: 5px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  padding: 6px 0;
+  min-width: 120px;       /* ✅ prevents it from being too narrow */
+  width: fit-content;     /* ✅ grows with text */
+  white-space: nowrap;    /* ✅ prevents text wrapping */
+  z-index: 100;
+}
+
+.profile-common-dropdown-item {
+  padding: 10px 14px;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #343434;
+}
+
+.profile-common-dropdown-item:hover {
+  background: #f3f4f6;
+}
+
+.menu-icons {
+  width: 16px;
+  height: 16px;
+  color: #4285f4;
+}
+
+.profile-common-item + .profile-common-item {
+  margin-top: 12px;
+}
+
+@media (max-width: 700px) {
+  .card {
+    padding: 8px 10px 12px 10px;
+  }
+
+  .section-header {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .add-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .profile-common-left {
+    gap: 10px;
+  }
+
+  .profile-common-icon {
+    width: 46px;
+    height: 52px;
+    font-size: 14px;
+  }
+
+  .profile-common-svg,
+  .profile-common-svg--edu,
+  .profile-common-svg--certificate {
+    width: 20px;
+    height: 20px;
+  }
+
+  .profile-common-role {
+    font-size: 12px !important;
+    margin-bottom: 2px;
+  }
+
+  .profile-common-company {
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  .profile-common-dates {
+    font-size: 11px;
+  }
+
+  .profile-common-dropdown-item {
+    font-size: 11px;
+    padding: 8px 12px;
+  }
+
+  .menu-icons {
+    width: 14px;
+    height: 14px;
+  }
+
+  .dots-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+    .profile-common-item + .profile-common-item {
+    margin-top: 8px;
+  }
+
+}
