@@ -119,7 +119,9 @@ npm install
 npm run dev
 ```
 
-Frontend runs at `http://localhost:5173`, backend at `http://localhost:5000`
+Frontend runs at `http://localhost:5173`
+
+> **Note:** The frontend is pre-configured in `src/config.js` to point to the deployed backend on Render. No changes are needed — the frontend will work against the live API out of the box.
 
 ---
 
