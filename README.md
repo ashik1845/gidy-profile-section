@@ -94,9 +94,22 @@ PORT=5000
 GEMINI_API_KEY=your_gemini_api_key
 ```
 
-```bash
-npm start
+Make sure your `package.json` has the following scripts:
+
+```json
+"scripts": {
+  "dev": "nodemon server.js",
+  "start": "node server.js"
+}
 ```
+
+Start the backend in development mode:
+
+```bash
+npm run dev
+```
+
+> For production use `npm start` instead.
 
 ### 3. Frontend setup
 
