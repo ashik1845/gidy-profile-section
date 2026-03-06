@@ -1,4 +1,4 @@
-/* ========== GLOBAL STYLES ========== */
+
 * {
   font-family: "Open Sans", sans-serif;
 }
@@ -44,7 +44,7 @@ body {
   line-height:1.5;
 }
 
-/* App.css — add this */
+
 .career-empty {
   font-size: 14px;
   
@@ -90,7 +90,7 @@ body {
   flex-direction: column;
 }
 
-/* Responsive */
+
 @media (max-width: 1000px) {
   .grid-layout {
     grid-template-columns: 1fr;
@@ -134,15 +134,12 @@ body {
 }
 
 
-/* Ultra thin scrollbar */
 
-/* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
   width: 3px;
   height: 3px;
 }
 
-/* Remove ALL arrow buttons */
 ::-webkit-scrollbar-button {
   display: none;
 }
@@ -156,12 +153,10 @@ body {
   display: none;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 
-/* Thumb */
 ::-webkit-scrollbar-thumb {
   background: rgba(0,0,0,0.25);
   border-radius: 10px;
@@ -171,7 +166,6 @@ body {
   background: rgba(0,0,0,0.4);
 }
 
-/* Firefox */
 * {
   scrollbar-width: thin;
   scrollbar-color: rgba(0,0,0,0.25) transparent;

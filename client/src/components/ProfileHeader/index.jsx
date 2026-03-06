@@ -57,7 +57,6 @@ const ProfileHeader = forwardRef(function ProfileHeader({ profile, refresh }, re
 
   return (
     <>
-      {/* ✅ no public-header class — same card always */}
       <div className="profile-header-card">
 
         <div className="header-row">
@@ -66,7 +65,7 @@ const ProfileHeader = forwardRef(function ProfileHeader({ profile, refresh }, re
           <div className="social-kebab-wrap" style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: "10px" }}>
             <ProfileSocialIcons socials={profile.socials} />
 
-            {/* Toggle — always visible, left of kebab */}
+            
             <button
               className={`public-toggle-btn ${isPublic ? "active" : ""}`}
               onClick={togglePublic}

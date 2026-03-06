@@ -21,12 +21,10 @@ function EditSocialRow({ social, patterns, onSave, onDelete }) {
     <div style={{ marginBottom: "18px" }}>
       <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
 
-        {/* Label */}
         <span style={{ fontSize: "12px",fontWeight:"600", color: "rgb(128, 128, 128)", minWidth: "75px", textAlign: "right", flexShrink: 0 }}>
           {label} :
         </span>
 
-        {/* Input — takes all remaining space */}
         <input
           value={url}
           onChange={(e) => { setUrl(e.target.value); setError(""); setSaved(false); }}
@@ -41,7 +39,6 @@ function EditSocialRow({ social, patterns, onSave, onDelete }) {
           }}
         />
 
-        {/* ✅ tick */}
         <svg
           onClick={handleSave}
           viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -51,7 +48,6 @@ function EditSocialRow({ social, patterns, onSave, onDelete }) {
           <polyline points="20 6 9 17 4 12"/>
         </svg>
 
-        {/* 🗑 delete */}
         <svg
           onClick={() => onDelete(social.platform)}
           viewBox="0 0 24 24" fill="currentColor"

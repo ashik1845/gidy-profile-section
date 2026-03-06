@@ -85,7 +85,6 @@ const CertItem = ({ cert, formatDate, onEdit, onDelete }) => {
         </div>
       </div>
 
-      {/* ✅ hide 3-dot menu in public view */}
       {!isPublic && (
         <>
           <div className="profile-common-menu" onClick={() => setMenuOpen((v) => !v)}>

@@ -1,4 +1,3 @@
-/* ========== PROFILE SECTION (shared: Experience + Education) ========== */
 
 .card {
   background: #ffffff;
@@ -76,7 +75,7 @@
 }
 
 
-/* ── Icon box — two variants ── */
+
 
 .profile-common-icon {
   width: 60px;
@@ -87,13 +86,11 @@
   justify-content: center;
   font-size: 18px;
    flex-shrink: 0; 
-  /* Experience: blue tint */
   border: 1px solid #4285f44d;
   background: #4285f40d;
 }
 
 .profile-common-icon--edu {
-  /* Education: grey tint */
   border: 1px solid #8080804d;
   background: #8080800d;
 }
@@ -103,19 +100,19 @@
 .profile-common-svg {
   width: 25px;
   height: 25px;
-  color: #4285ffcc;         /* Experience — blue */
+  color: #4285ffcc;        
 }
 
 .profile-common-svg--edu {
   width: 25px;
   height: 25px;
-  color: grey;              /* Education — grey */
+  color: grey;              
 }
 
 .profile-common-svg--certificate {
   width: 25px;
   height: 25px;
-  color: #4285ffcc;         /* Experience — blue */
+  color: #4285ffcc;         
 }
 
 /* ── Item text ── */
@@ -160,9 +157,9 @@
   border-radius: 8px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   padding: 6px 0;
-  min-width: 120px;       /* ✅ prevents it from being too narrow */
-  width: fit-content;     /* ✅ grows with text */
-  white-space: nowrap;    /* ✅ prevents text wrapping */
+  min-width: 120px;       
+  width: fit-content;     
+  white-space: nowrap;    
   z-index: 100;
 }
 

@@ -23,7 +23,6 @@ function App() {
   const [profile, setProfile]       = useState(null);
   const [completion, setCompletion] = useState(0);
 
-  // When backend is ready, replace null with actual career data
   const careerGoal = null;
 
   const handleTaskClick = (key) => {
@@ -63,10 +62,9 @@ const fetchProfile = async () => {
           refresh={fetchProfile}
         />
 
-        {/* ✅ Career card — always visible */}
+        {/*  Career car*/}
         <div className="career-card">
           {isPublic ? (
-            /* Public view — show empty state if no career data */
             careerGoal ? (
               <div className="career-text">
                 <h3>{careerGoal.title}</h3>
@@ -76,7 +74,6 @@ const fetchProfile = async () => {
               <p className="career-empty">Career goals have not been added yet.</p>
             )
           ) : (
-            /* Edit view — show the add prompt */
             <>
               <div className="career-text">
                 <h3>Tell us where you want to go</h3>

@@ -49,7 +49,6 @@ const SkillsSection = forwardRef(function SkillsSection({ profile, refresh }, re
       {/* ── Header ── */}
       <div className="section-header">
         <p>Skills</p>
-        {/* ✅ hide add button in public view */}
         {!isPublic && (
           <button className="add-btn" onClick={openModal}>
             <svg viewBox="0 0 512 512" className="add-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

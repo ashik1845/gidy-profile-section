@@ -1,4 +1,3 @@
-/* ========== PROFILE COMPLETION CARD ========== */
 
 .profile-complete {
   padding: 15px;
@@ -119,7 +118,7 @@
 .profile-complete-done {
   display: flex;
   align-items: center;
-  justify-content: space-between;  /* ✅ text left, icon right */
+  justify-content: space-between;  
   padding: 6px 4px;
   gap: 14px;
 }
@@ -143,7 +142,7 @@
   flex-shrink: 0;
   width: 28px;
   height: 28px;
-  color: #22c55e;  /* ✅ green tick */
+  color: #22c55e;  
 }
 
 @media (max-width: 700px) {

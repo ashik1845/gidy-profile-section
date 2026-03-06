@@ -16,7 +16,6 @@ useEffect(() => {
   return (
     <Modal onClose={onClose}>
 
-      {/* SCROLL AREA */}
       <div className="modal-body">
 
         {/* Avatar */}

@@ -21,14 +21,11 @@
 }
 
 
-/* remove mobile override — no longer needed */
-/* In PublicView.css — replace the entire @media (max-width: 700px) block */
-
 @media (max-width: 700px) {
   .public-toggle-btn {
     position: absolute !important;
     top: 12px;
-    right: 40px; /* sits left of kebab (kebab is at right: 12px, width ~25px + gap) */
+    right: 40px;
     margin-top: 0 !important;
     width: 20px;
     height: 20px;
@@ -40,6 +37,6 @@
   }
 
   .public-toggle-btn span {
-    display: none; /* hide label on mobile */
+    display: none;
   }
 }

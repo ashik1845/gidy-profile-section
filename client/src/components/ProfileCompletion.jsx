@@ -41,7 +41,7 @@ const TASKS = [
 function isTaskDone(profile, key) {
   if (!profile) return false;
 
-  // Bio = all basic info fields filled
+  
   if (key === "bio") {
     return Boolean(
       profile.firstName &&

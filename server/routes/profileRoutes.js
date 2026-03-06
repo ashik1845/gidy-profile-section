@@ -15,7 +15,7 @@ const storage = new CloudinaryStorage({
       folder: "gidy-profile",
       allowed_formats: ["jpg", "jpeg", "png", "pdf", "doc", "docx"],
       resource_type: isPDF ? "raw" : "image",
-      type: "upload", // ← ADD THIS — forces public access
+      type: "upload", 
       public_id: Date.now() + "-" + file.originalname.replace(/\s+/g, "_"),
     };
   },

@@ -1,7 +1,7 @@
-// components/AIAnalyzer.jsx
 import { useState } from "react";
 import API from "../api";
 import "../styles/AIAnalyzer.css";
+import { useModal } from "../context/ModalContext";
 
 const ROLES = [
   "Full Stack Developer",
@@ -50,6 +50,7 @@ function AIAnalyzer() {
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const { anyModalOpen } = useModal();
 
   const activeRole = targetRole === "custom" ? customRole : targetRole;
 
@@ -79,12 +80,14 @@ function AIAnalyzer() {
   return (
     <>
       {/* ── Floating trigger button ── */}
+      {!anyModalOpen && (
       <button className="ai-fab" onClick={() => setPopupOpen(true)} title="AI Profile Analyzer">
         <svg viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
         </svg>
         <span className="ai-fab-label">AI Analyze</span>
       </button>
+       )}
 
       {/* ── Backdrop + Popup ── */}
       {popupOpen && (
@@ -107,7 +110,7 @@ function AIAnalyzer() {
 
             <p className="ai-subtitle">Select a target role and let AI score your profile and suggest improvements.</p>
 
-            {/* Scrollable body */}
+        
             <div className="ai-popup-body">
 
               {/* Role Selector */}

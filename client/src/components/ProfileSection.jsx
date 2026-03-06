@@ -98,7 +98,6 @@ const ProfileSection = forwardRef(function ProfileSection({
       {/* ── Header ── */}
       <div className="section-header">
         <p>{title}</p>
-        {/* ✅ hide add button in public view */}
         {!isPublic && (
           <button className="add-btn" onClick={openAdd}>
             <AddIcon />
@@ -132,7 +131,6 @@ const ProfileSection = forwardRef(function ProfileSection({
                 </div>
               </div>
 
-              {/* ✅ hide 3-dot menu in public view */}
               {!isPublic && (
                 <div className="profile-common-menu-wrap" ref={menuOpen === item._id ? menuRef : null}>
                   <div className="profile-common-menu" onClick={() => setMenuOpen(item._id)}>
@@ -157,7 +155,6 @@ const ProfileSection = forwardRef(function ProfileSection({
         <div className="empty-state">{emptyText}</div>
       )}
 
-      {/* ── Add / Edit Modal ── */}
       {editOpen && (
         <Modal onClose={() => setEditOpen(false)}>
           <h3 className="modal-title">{selected ? `Update ${title}` : `Add ${title}`}</h3>
@@ -169,7 +166,6 @@ const ProfileSection = forwardRef(function ProfileSection({
         </Modal>
       )}
 
-      {/* ── Delete Modal ── */}
       {deleteOpen && (
         <Modal onClose={() => setDeleteOpen(false)}>
           <h3 className="modal-title">{deleteTitle}</h3>

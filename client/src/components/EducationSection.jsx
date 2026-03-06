@@ -59,7 +59,7 @@ const renderFields = (form, setForm) => (
 const EducationSection = forwardRef(function EducationSection({ profile, refresh }, ref) {
   return (
     <ProfileSection
-      ref={ref}              // ✅ forward ref
+      ref={ref}            
       title="Education"
       items={profile.education || []}
       apiPath="/education"

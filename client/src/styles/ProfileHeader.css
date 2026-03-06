@@ -323,7 +323,6 @@ a {
     height: 20px;
   }
 
-  /* kebab stays in flex row, don't absolute position */
   .kebab {
     position: static;
     margin: 0;
@@ -414,12 +413,12 @@ a {
 
   .kebab-menu-wrap {
     position: absolute !important;
-    top: 12px;   /* matches card padding-top */
-    right: 12px; /* matches card padding-right */
+    top: 12px;   
+    right: 12px;
     margin-left: 0 !important;
   }
   .header-row {
-    position: static; /* remove relative from header-row */
+    position: static; 
   }
 
 .kebab {
