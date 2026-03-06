@@ -426,3 +426,24 @@ a {
 }
 }
 
+@media (max-width: 600px) {
+  .modal-overlay {
+    padding: 16px;
+  }
+
+  .modal {
+    width: 100%;
+    max-width: 100%;
+    padding: 18px;
+    max-height: 90vh;
+  }
+
+  .modal-body {
+    max-width: 100%;
+  }
+
+  .edit-socials-modal {
+    min-width: unset !important;
+    width: 100% !important;
+  }
+}

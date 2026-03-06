@@ -218,14 +218,3 @@
    white-space: nowrap;
 }
 
-@media (max-width: 600px) {
-  .modal {
-    width: 92vw;
-    padding: 18px;
-    max-height: 90vh;
-  }
-
-  .modal-body {
-    max-width: 100%;
-  }
-}
