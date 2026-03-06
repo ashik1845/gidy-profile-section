@@ -2,7 +2,7 @@ function ProfileAvatar({ profile }) {
   return (
     <>
       <img
-        src={profile.avatar ? `http://localhost:5000/${profile.avatar}` : "/avatar.png"}
+        src={profile.avatar ? `https://gidy-profile-section.onrender.com/${profile.avatar}` : "/avatar.png"}
         alt="avatar"
         className="avatar"
       />

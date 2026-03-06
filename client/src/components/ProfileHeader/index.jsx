@@ -45,7 +45,7 @@ const ProfileHeader = forwardRef(function ProfileHeader({ profile, refresh }, re
   };
 
   const handleDownloadResume = async () => {
-    const response = await fetch(`http://localhost:5000/${profile.resume}`);
+    const response = await fetch(`https://gidy-profile-section.onrender.com/${profile.resume}`);
     const blob = await response.blob();
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement("a");
