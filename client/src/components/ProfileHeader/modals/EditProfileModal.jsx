@@ -84,7 +84,17 @@ useEffect(() => {
           onChange={(e) => setForm({ ...form, bio: e.target.value })}
         />
 
-       <div className="resume-upload">
+    <label className="resume-upload">
+  <input
+    type="file"
+    hidden
+    accept=".pdf,.doc,.docx"
+    onChange={(e) => {
+      const file = e.target.files[0];
+      if (file) setResumeFile(file);
+    }}
+  />
+  
   <svg
     stroke="currentColor"
     fill="currentColor"
@@ -99,19 +109,10 @@ useEffect(() => {
       d="M320 255.79l-64-64-64 64m64 192.42V207.79"/>
   </svg>
 
-  <label className="resume-upload-label">
-    <input
-      type="file"
-      hidden
-      accept=".pdf,.doc,.docx"
-      onChange={(e) => {
-        const file = e.target.files[0];
-        if (file) setResumeFile(file);
-      }}
-    />
+  <span className="resume-upload-label">
     {resumeFile ? resumeFile.name : "UPLOAD RESUME"}
-  </label>
-</div>
+  </span>
+</label>
       </div>
 
       {/* FOOTER */}
