@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useModal } from "../../context/ModalContext";
+import { useModal } from "../context/ModalContext";
 import "../styles/Modal.css";
 
 export default function Modal({ onClose, children, className = "" }) {
