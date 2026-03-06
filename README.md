@@ -20,7 +20,7 @@ A full-stack developer profile application — replica + innovation.
 | Frontend     | React + Vite                |
 | Backend      | Node.js + Express           |
 | Database     | MongoDB Atlas               |
-| File Uploads | Multer                      |
+| File Uploads | Multer + Cloudinary         |
 | HTTP Client  | Axios                       |
 | ODM          | Mongoose                    |
 | AI           | Google Gemini 2.5 Flash API |
@@ -71,6 +71,7 @@ A toggle button in the profile header switches between Edit Mode and Public View
 - npm
 - MongoDB Atlas account (free tier)
 - Google AI Studio account for Gemini API key
+- Cloudinary account (free tier) for file uploads
 
 ### 1. Clone the repository
 
@@ -92,6 +93,9 @@ Create a `.env` file inside the `server` folder:
 MONGO_URI=your_mongodb_atlas_uri
 PORT=5000
 GEMINI_API_KEY=your_gemini_api_key
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_cloudinary_api_key
+CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 ```
 
 Make sure your `package.json` has the following scripts:
@@ -154,6 +158,19 @@ mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/<dbname>?retryWri
 6. Paste as `GEMINI_API_KEY` in your `.env`
 
 > **Note:** The free tier allows up to 500 requests/day on Gemini 2.5 Flash. Do not commit your API key to GitHub.
+
+---
+
+## ☁️ Getting Your Cloudinary Credentials
+
+Cloudinary is used to store and serve avatar images and resume PDFs. You need a free account to enable file uploads.
+
+1. Go to [https://cloudinary.com](https://cloudinary.com) and sign up for a free account
+2. After login, go to your **Dashboard** — you will see your **Cloud Name**, **API Key**, and **API Secret** at the top
+3. Copy all three values and paste them into your `.env` file as shown above
+4. Go to **Settings → Security** and check **"Allow delivery of PDF and ZIP files"** — this is required for resume uploads to work
+
+> **Note:** The free tier includes 25 GB storage and 25 GB bandwidth per month — more than enough for development. Do not commit your API secret to GitHub.
 
 ---
 
