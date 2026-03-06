@@ -109,7 +109,7 @@ useEffect(() => {
       d="M320 255.79l-64-64-64 64m64 192.42V207.79"/>
   </svg>
 
-  <span className="resume-upload-label">
+  <span>
     {resumeFile ? resumeFile.name : "UPLOAD RESUME"}
   </span>
 </label>

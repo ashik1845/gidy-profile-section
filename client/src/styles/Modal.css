@@ -126,6 +126,11 @@
 /* Upload box */
 
 .resume-upload {
+  display: flex;          
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
   border: 1px dashed rgb(196, 196, 196);
   border-radius: 10px;
   padding: 25px;
@@ -133,27 +138,9 @@
   margin-top: 20px;
   cursor: pointer;
   background: #fafafa;
-
   width: 100%;
   box-sizing: border-box;
-   display: flex;
-  flex-direction: column;   
-  align-items: center;
-  justify-content: center;
-  gap: 2px;
 }
-.resume-upload button {
-  margin-top: 10px;
-      padding: 5px 15px;
-  color: rgb(255, 255, 255);
-    background-color: rgb(196, 196, 196);
-    padding: 5px 15px;
-  border: none;
-  border-radius: 5px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
 .upload-icon {
   width: 40px;
   height: 40px;
