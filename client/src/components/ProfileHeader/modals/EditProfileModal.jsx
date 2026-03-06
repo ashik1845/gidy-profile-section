@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Modal from "../../Modal";
-import { BASE_URL } from "../../config";
+import { BASE_URL } from "../../../config";
 
 function EditProfileModal({ profile, open, onClose, onSave }) {
   const [form, setForm] = useState(profile);
