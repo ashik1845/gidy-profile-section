@@ -8,8 +8,8 @@ A full-stack developer profile application — replica + innovation.
 
 ## 🔗 Live Links
 
-- **Live App:** [Update with Netlify URL]
-- **GitHub Repo:** [Update with GitHub URL]
+- **Live App:** [https://gidy-profile-replica.netlify.app/]
+- **GitHub Repo:** [https://github.com/ashik1845/gidy-profile-section]
 
 ---
 
@@ -75,8 +75,8 @@ A toggle button in the profile header switches between Edit Mode and Public View
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
-cd gidy-profile-replica
+git clone https://github.com/ashik1845/gidy-profile-section.git
+cd gidy-profile-section
 ```
 
 ### 2. Backend setup
